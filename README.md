@@ -337,7 +337,7 @@ Antes de permitir el acceso al sistema.
 
 ## Consola ejecutando las funciones
 
-![Captura consola]()
+![Captura consola](img/consola.PNG)
 
 ---
 
