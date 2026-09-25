@@ -45,8 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     campoCorreo.addEventListener('input', validarCampoCorreo);
     campoTelefono.addEventListener('input', validarCampoTelefono);
     campoCURP.addEventListener('input', validarCampoCURP);
-    
-    // Valida silenciosamente mientras se escribe
     campoFechaNacimiento.addEventListener('input', validarCampoFechaNacimiento);
 
     campoContrasena.addEventListener('input', () => {
@@ -55,13 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     campoConfirmarContrasena.addEventListener('input', validarCampoConfirmarContrasena);
 
-    // Dispara el modal 
     campoFechaNacimiento.addEventListener('blur', () => {
         const esFechaValida = validarCampoFechaNacimiento();
         if (campoFechaNacimiento.value) {
             const edadCalculada = calcularEdad(campoFechaNacimiento.value);
-            
-            // Si la fecha está incompleta (NaN), no mostramos el modal
             if (edadCalculada >= 0) {
                 if (esFechaValida) {
                     textoModalEdad.textContent = `Tu edad calculada es de ${edadCalculada} años. ¡Acceso permitido!`;
@@ -114,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formulario.reset();
             document.querySelectorAll('.grupo-campo').forEach(grupo => grupo.classList.remove('valido', 'invalido'));
         } else {
+            console.log('Formulario con errores. Corrígelos antes de enviar.');
             alert('Por favor, corrige los errores en el formulario.');
         }
     });
