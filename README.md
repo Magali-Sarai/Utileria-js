@@ -60,12 +60,6 @@ O si el archivo se encuentra en la misma carpeta:
 
 Valida que un correo electrónico tenga un formato correcto.
 
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| correo | String |
-
 **Retorna**
 
 - `true` si el correo es válido.
@@ -84,12 +78,6 @@ function validarCorreo(correo) {
 ## 2. soloLetras(texto)
 
 Permite únicamente letras mayúsculas, minúsculas, espacios y vocales acentuadas.
-
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| texto | String |
 
 **Retorna**
 
@@ -111,13 +99,6 @@ function soloLetras(texto) {
 
 Valida que un número no exceda la longitud máxima permitida.
 
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| numero | Number o String |
-| maxLongitud | Number |
-
 **Retorna**
 
 - `true` si la longitud es válida.
@@ -134,19 +115,11 @@ function validarLongitud(numero, maxLongitud) {
     return cadena.length <= maxLongitud;
 }
 ```
-
-
 ---
 
 ## 4. calcularEdad(fechaNacimiento)
 
 Calcula la edad del usuario a partir de su fecha de nacimiento.
-
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| fechaNacimiento | Date (YYYY-MM-DD) |
 
 **Retorna**
 
@@ -177,12 +150,6 @@ function calcularEdad(fechaNacimiento) {
 
 Determina si una persona es mayor de edad.
 
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| fechaNacimiento | Date |
-
 **Retorna**
 
 - `true` si tiene 18 años o más.
@@ -208,12 +175,6 @@ Valida que una contraseña cumpla con los siguientes requisitos:
 - Un número
 - Un carácter especial
 
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| password | String |
-
 **Retorna**
 
 - `true` si cumple todos los requisitos.
@@ -227,22 +188,13 @@ function validarPassword(contrasena) {
     return expresionRegular.test(contrasena);
 }
 ```
-
 ---
 
 # Funciones adicionales
 
 ## validarTelefono(telefono)
 
-Valida que un número telefónico mexicano tenga exactamente 10 dígitos.
-
-Acepta espacios, guiones y paréntesis.
-
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| telefono | String |
+Valida que un número telefónico mexicano tenga exactamente 10 dígitos. Acepta espacios, guiones y paréntesis.
 
 **Retorna**
 
@@ -266,12 +218,6 @@ function validarTelefono(telefono) {
 ## validarCURP(curp)
 
 Valida que una CURP mexicana tenga un formato correcto.
-
-**Parámetros**
-
-| Parámetro | Tipo |
-|-----------|------|
-| curp | String |
 
 **Retorna**
 
@@ -328,7 +274,6 @@ El archivo **login.html** utiliza:
 validarCorreo(correo);
 validarPassword(password);
 ```
-
 Antes de permitir el acceso al sistema.
 
 ---
