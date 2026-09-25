@@ -89,6 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const contrasenaValida = validarCampoContrasena();
         const confirmarContrasenaValida = validarCampoConfirmarContrasena();
 
+        console.log('--- Resultados de validación al enviar el formulario ---');
+        console.log('validarCorreo("' + campoCorreo.value.trim() + '"):', validarCorreo(campoCorreo.value.trim()));
+        console.log('soloLetras("' + campoNombre.value.trim() + '"):', soloLetras(campoNombre.value.trim()));
+        console.log('validarLongitud(confirmarContrasena, 20):', validarLongitud(campoConfirmarContrasena.value, 20));
+        console.log('calcularEdad("' + campoFechaNacimiento.value + '"):', calcularEdad(campoFechaNacimiento.value));
+        console.log('esMayorDeEdad("' + campoFechaNacimiento.value + '"):', esMayorDeEdad(campoFechaNacimiento.value));
+        console.log('validarPassword("' + campoContrasena.value + '"):', validarPassword(campoContrasena.value));
+        console.log('validarTelefono("' + campoTelefono.value.trim() + '"):', validarTelefono(campoTelefono.value.trim()));
+        console.log('validarCURP("' + campoCURP.value.trim() + '"):', validarCURP(campoCURP.value.trim()));
+
         const todoCorrecto = nombreValido && correoValido && fechaNacimientoValida &&
             telefonoValido && curpValida && contrasenaValida && confirmarContrasenaValida;
 
